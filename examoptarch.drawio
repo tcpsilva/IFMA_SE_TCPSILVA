@@ -1,41 +1,35 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
   <diagram id="CompleteHardwareSchematic" name="Circuito Completo do Hardware">
-    <mxGraphModel dx="1231" dy="1449" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+    <mxGraphModel dx="589" dy="1110" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="title" value="Circuito Completo do Hardware" style="text;html=1;fontSize=18;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="170" y="-40" width="300" height="40" as="geometry" />
+          <mxGeometry x="295" y="-30" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="gnd" value="GND" style="shape=process;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="390" y="180" width="100" height="40" as="geometry" />
+          <mxGeometry x="395" y="180" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="pico" value="Pico-SDK" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
           <mxGeometry x="380" y="240" width="130" height="80" as="geometry" />
         </mxCell>
         <mxCell id="picoPins" value="GP2/PWM Servo Left&#xa;GP3/PWM Servo Right&#xa;GP4/UpLeft Btn&#xa;GP5/DownLeft Btn&#xa;GP6/UpRight Btn&#xa;GP7/DownRight Btn&#xa;GP26/ADC Joystick Y&#xa;GP27/ADC Joystick X" style="text;html=1;align=left;verticalAlign=top;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="240" y="180" width="130" height="100" as="geometry" />
+          <mxGeometry x="220" y="30" width="130" height="100" as="geometry" />
         </mxCell>
         <mxCell id="servoLeft" value="Servo Left" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="230" y="60" width="100" height="40" as="geometry" />
+          <mxGeometry x="250" y="170" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="servoRight" value="Servo Right" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="580" y="80" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="buttonsLabel" value="Botões (4x)" style="text;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="620" y="210" width="160" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="btnUpLeft" value="Btn Up Left" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="150" y="300" width="80" height="40" as="geometry" />
+          <mxGeometry x="520" y="170" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="btnDownLeft" value="Btn Down Left" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="150" y="350" width="80" height="40" as="geometry" />
+          <mxGeometry x="270" y="320" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="btnUpRight" value="Btn Up Right" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="620" y="300" width="80" height="40" as="geometry" />
+          <mxGeometry x="540" y="270" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="btnDownRight" value="Btn Down Right" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="620" y="350" width="80" height="40" as="geometry" />
+          <mxGeometry x="540" y="320" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="joystick" value="Joystick" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="385" y="370" width="120" height="40" as="geometry" />
@@ -85,7 +79,7 @@
         <mxCell id="lineGndBtnUpLeft" style="endArrow=none;endFill=0;dashed=1;" parent="1" source="gnd" target="btnUpLeft" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="lineGndBtnDownLeft" style="endArrow=none;endFill=0;dashed=1;" parent="1" source="gnd" target="btnDownLeft" edge="1">
+        <mxCell id="lineGndBtnDownLeft" style="endArrow=none;endFill=0;dashed=1;" parent="1" source="btnUpLeft" target="btnDownLeft" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lineGndBtnUpRight" style="endArrow=none;endFill=0;dashed=1;" parent="1" source="gnd" target="btnUpRight" edge="1">
@@ -113,7 +107,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="power5v" value="Fonte 5V" style="shape=process;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="395" y="70" width="100" height="40" as="geometry" />
+          <mxGeometry x="395" y="90" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="OBIYeq0KEJqnpQglvESE-3" value="" style="endArrow=open;endFill=0;dashed=1;strokeColor=#6c8ebf;" edge="1" parent="1" source="power5v" target="regulator3v3">
           <mxGeometry relative="1" as="geometry">
@@ -123,6 +117,18 @@
         </mxCell>
         <mxCell id="regulator3v3" value="Regulador 3.3V" style="shape=process;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="395" y="130" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OBIYeq0KEJqnpQglvESE-7" value="" style="endArrow=none;endFill=0;dashed=1;" edge="1" parent="1" source="gnd" target="btnUpLeft">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="411" y="220" as="sourcePoint" />
+            <mxPoint x="219" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="btnUpLeft" value="Btn Up Left" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="270" y="270" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OBIYeq0KEJqnpQglvESE-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="opticalChart" target="opticalChart">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
