@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "author": "Thiago Silva - tcpsilva",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 25.55,
+      "left": -34.85,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick",
+      "top": 383.4,
+      "left": -42.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo_left",
+      "top": -165.2,
+      "left": -249.6,
+      "attrs": { "hornAngle": "90" }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo_right",
+      "top": -165.2,
+      "left": 153.6,
+      "attrs": { "hornAngle": "90" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_up_left",
+      "top": 246.2,
+      "left": -288,
+      "attrs": { "color": "black", "xray": "1", "label": "Up Left" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_down_left",
+      "top": 419,
+      "left": -297.6,
+      "attrs": { "color": "gray", "xray": "1", "label": "Down Left" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_up_right",
+      "top": 265.4,
+      "left": 297.6,
+      "attrs": { "color": "black", "xray": "1", "label": "Up Right" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_down_right",
+      "top": 420,
+      "left": 300,
+      "attrs": { "color": "gray", "xray": "1", "label": "Down Right" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "green", [ "v0" ] ],
+    [ "pico:GP1", "$serialMonitor:TX", "green", [ "v0" ] ],
+    [ "joystick:VERT", "pico:GP26", "blue", [ "h105.6", "v-374.4" ] ],
+    [ "joystick:HORZ", "pico:GP27", "blue", [ "h96", "v-384" ] ],
+    [ "joystick:VCC", "pico:3V3", "red", [ "h115.2", "v-422.4" ] ],
+    [ "joystick:GND", "pico:GND.1", "black", [ "h86.4", "v-441.6" ] ],
+    [ "servo_left:PWM", "pico:GP2", "orange", [ "v0" ] ],
+    [ "servo_left:VCC", "pico:3V3", "red", [ "v0" ] ],
+    [ "servo_left:GND", "pico:GND.2", "black", [ "v0" ] ],
+    [ "servo_right:PWM", "pico:GP3", "orange", [ "v0" ] ],
+    [ "servo_right:VCC", "pico:3V3", "red", [ "v0" ] ],
+    [ "servo_right:GND", "pico:GND.3", "black", [ "v0" ] ],
+    [ "btn_up_left:1.r", "pico:GP4", "blue", [ "h29", "v-172.8" ] ],
+    [ "btn_up_left:2.r", "pico:GND.4", "black", [ "h-10", "v-30" ] ],
+    [ "btn_down_left:1.r", "pico:GP5", "blue", [ "h38.6", "v-336" ] ],
+    [ "btn_down_left:2.r", "pico:GND.5", "black", [ "h19.4", "v-249.44" ] ],
+    [ "btn_up_right:1.r", "pico:GP6", "blue", [ "h20", "v-50" ] ],
+    [ "btn_up_right:2.r", "pico:GND.6", "black", [ "h10", "v-30" ] ],
+    [ "btn_down_right:1.r", "pico:GP7", "blue", [ "h25", "v-60" ] ],
+    [ "btn_down_right:2.r", "pico:GND.7", "black", [ "h15", "v-40" ] ]
+  ],
+  "dependencies": {}
+}
